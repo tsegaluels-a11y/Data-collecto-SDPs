@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Bright Future </title>
+  
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html>
+<head>
+<title>HIV መርመራታት ሪፖርት</title>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  background-image: url('https://uploads.onecompiler.io/43uswas5k/43uvjk7e2/image_1756242432720.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-color: #f0f8ff;
+  transition: background-color 0.5s ease;
+}
+
+body:hover {
+  background-color: #e0f0ff;
+}
+
+/* Logo styling */
+.logo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background-color: rgba(255, 255, 255, 0.8);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo img {
+  max-width: 200px;
+  max-height: 80px;
+}
+
+.container {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 120px auto 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  position: relative;
+}
+
+.container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+  color: #1e90ff;
+  text-align: center;
+  margin-bottom: 20px;
+  animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.form-group {
+  margin-bottom: 20px;
+  animation: slideIn 0.6s ease;
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(-20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+input[type="number"],
+select,
+input[type="date"] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+  margin-top: 4px;
+  font-size: 16px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="number"]:focus,
+select:focus,
+input[type="date"]:focus {
+  border-color: #1e90ff;
+  outline: none;
+  box-shadow: 0 0 5px rgba(30, 144, 255, 0.5);
+}
+
+button {
+  background-color: #1e90ff;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-right: 10px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  animation: buttonPulse 1.5s infinite ease-in-out;
+}
+
+@keyframes buttonPulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(30, 144, 255, 0.7);
+  }
+  70% {
+    transform: scale(1.1);
+    box-shadow: 0 0 0 10px rgba(30, 144, 255, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(30, 144, 255, 0);
+  }
+}
+
+button:hover {
+  background-color: #007bff;
+  transform: scale(1.05);
+}
+
+button:last-child {
+  margin-right: 0;
+}
+
+#reportTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 30px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#reportTable th, #reportTable td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+#reportTable th {
+  background-color: #1e90ff;
+  font-weight: bold;
+  color: white;
+}
+
+#reportTable tr:hover td {
+  background-color: #e0f0ff;
+}
+
+/* Custom Report Section */
+.custom-report-section {
+  margin-top: 20px;
+  border: 1px solid #ccc;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.custom-report-section label {
+  margin-bottom: 5px;
+  display: block;
+}
+
+.custom-report-section select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.custom-report-section button {
+  margin-top: 10px;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 10px;
+  font-size: 12px;
+  color: #777;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  margin-top: 50px;
+}
+</style>
+</head>
+<body>
+
+<!-- Logo Section -->
+<div class="logo">
+  <img src="https://uploads.onecompiler.io/43uswas5k/43uvjk7e2/image_1756242432720.png" alt="Logo">
+</div>
+
+<div class="container">
+  <h2>HIV መርመራታት ሪፖርት</h2>
+
+  <div class="form-group">
+    <label for="ward">Ward:</label>
+    <select id="ward">
+      <option value="SDP-1">SDP-1</option>
+      <option value="SDP-2">SDP-2</option>
+      <option value="SDP-3">SDP-3</option>
+      <option value="SDP-4">SDP-4</option>
+      <option value="SDP-5">SDP-5</option>
+      <option value="SDP-6">SDP-6</option>
+      <option value="SDP-7">SDP-7</option>
+      <option value="SDP-8">SDP-8</option>
+      <option value="SDP-9">SDP-9</option>
+      <option value="SDP-10">SDP-10</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="date">Date of Test:</label>
+    <input type="date" id="date">
+  </div>
+
+  <div class="form-group">
+      <label for="ageRange">Age Range:</label>
+      <select id="ageRangeSelect">
+          <option value="<1"> < 1 </option>
+          <option value="1-4"> 1-4 </option>
+          <option value="5-9"> 5-9 </option>
+          <option value="10-14"> 10-14 </option>
+          <option value="15-19"> 15-19 </option>
+          <option value="20-24"> 20-24 </option>
+          <option value="25-29"> 25-29 </option>
+          <option value="30-34"> 30-34 </option>
+          <option value="35-39"> 35-39 </option>
+          <option value="40-44"> 40-44 </option>
+          <option value="45-49"> 45-49 </option>
+          <option value="50-54"> 50-54 </option>
+          <option value="55-59"> 55-59 </option>
+          <option value="60-64"> 60-64 </option>
+          <option value="64+"> 64+ </option>
+      </select>
+  </div>
+
+  <div class="form-group">
+    <label for="sex">Sex:</label>
+    <select id="sex">
+      <option value="male">Male</option>
+      <option value="female">Female</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="positive">Positive መርመራታት:</label>
+    <input type="number" id="positive" value="0">
+  </div>
+
+  <div class="form-group">
+    <label for="negative">Negative መርመራታት:</label>
+    <input type="number" id="negative" value="0">
+  </div>
+
+  <button onclick="addReport()">ሪፖርት ኣእቱ</button>
+  <button onclick="clearForm()">Clear</button>
+  <button onclick="exportToCSV()">Export to CSV</button>
+  <!--  <button onclick="exportToPDF()">Export to PDF</button> -->
+
+  <!-- Custom Report Section -->
+  <div class="custom-report-section">
+    <h3>Custom Report</h3>
+    <label for="reportPeriod">Report Period:</label>
+    <select id="reportPeriod">
+      <option value="all">All Time</option>
+      <option value="1m">1 Month</option>
+      <option value="3m">3 Months</option>
+      <option value="6m">6 Months</option>
+      <option value="1y">1 Year</option>
+      <option value="custom">Custom Date Range</option>
+    </select>
+
+     <div id="customDateRange" style="display: none;">
+        <label for="startDate">Start Date:</label>
+        <input type="date" id="startDate">
+        <label for="endDate">End Date:</label>
+        <input type="date" id="endDate">
+    </div>
+
+    <button onclick="generateCustomReport()">Generate Report</button>
+  </div>
+
+
+  <table id="reportTable">
+    <thead>
+      <tr>
+        <th>Ward</th>
+        <th>Date</th>
+        <th>Age Range</th>
+        <th>Sex</th>
+        <th>Positive</th>
+        <th>Negative</th>
+        <th>Total</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Report data will be added here by JavaScript -->
+    </tbody>
+  </table>
+</div>
+
+<div class="footer">
+  Created by Tsegaluel Desta
+</div>
+
+<script>
+// Function to save reports to local storage
+function saveReports() {
+    const table = document.getElementById("reportTable").getElementsByTagName('tbody')[0];
+    const reports = [];
+    for (let i = 0; i < table.rows.length; i++) {
+        const row = table.rows[i];
+        const report = {
+            ward: row.cells[0].textContent,
+            date: row.cells[1].textContent,
+            ageRange: row.cells[2].textContent,
+            sex: row.cells[3].textContent,
+            positive: row.cells[4].textContent,
+            negative: row.cells[5].textContent,
+            total: row.cells[6].textContent
+        };
+        reports.push(report);
+    }
+    localStorage.setItem('hivReports', JSON.stringify(reports));
+}
+
+// Function to load reports from local storage
+function loadReports() {
+    const reports = JSON.parse(localStorage.getItem('hivReports')) || [];
+    const table = document.getElementById("reportTable").getElementsByTagName('tbody')[0];
+    table.innerHTML = ""; // Clear existing rows
+
+    reports.forEach(report => {
+        const newRow = table.insertRow();
+        const cellWard = newRow.insertCell();
+        const cellDate = newRow.insertCell();
+        const cellAgeRange = newRow.insertCell();
+        const cellSex = newRow.insertCell();
+        const cellPositive = newRow.insertCell();
+        const cellNegative = newRow.insertCell();
+        const cellTotal = newRow.insertCell();
+
+        cellWard.textContent = report.ward;
+        cellDate.textContent = report.date;
+        cellAgeRange.textContent = report.ageRange;
+        cellSex.textContent = report.sex;
+        cellPositive.textContent = report.positive;
+        cellNegative.textContent = report.negative;
+        cellTotal.textContent = report.total;
+    });
+}
+
+
+function addReport() {
+  var ward = document.getElementById("ward").value;
+  var date = document.getElementById("date").value;
+  var ageRange = document.getElementById("ageRangeSelect").value;
+  var sex = document.getElementById("sex").value;
+  var positive = parseInt(document.getElementById("positive").value);
+  var negative = parseInt(document.getElementById("negative").value);
+  var total = positive + negative;
+
+  if (isNaN(positive) || isNaN(negative)) {
+    alert("Please enter valid numbers for positive and negative results.");
+    return;
+  }
+
+  if (date === "") {
+    alert("Please select the date of the test.");
+    return;
+  }
+
+  var table = document.getElementById("reportTable").getElementsByTagName('tbody')[0];
+  var newRow = table.insertRow();
+
+  var cellWard = newRow.insertCell();
+  var cellDate = newRow.insertCell();
+  var cellAgeRange = newRow.insertCell();
+  var cellSex = newRow.insertCell();
+  var cellPositive = newRow.insertCell();
+  var cellNegative = newRow.insertCell();
+  var cellTotal = newRow.insertCell();
+
+  cellWard.innerHTML = ward;
+  cellDate.innerHTML = date;
+  cellAgeRange.innerHTML = ageRange;
+  cellSex.innerHTML = sex;
+  cellPositive.innerHTML = positive;
+  cellNegative.innerHTML = negative;
+  cellTotal.innerHTML = total;
+
+  // Clear the form fields
+  document.getElementById("date").value = "";
+  document.getElementById("positive").value = 0;
+  document.getElementById("negative").value = 0;
+
+    // Save reports to local storage after adding a new report
+    saveReports();
+}
+
+function clearForm() {
+    document.getElementById("date").value = "";
+    document.getElementById("positive").value = 0;
+    document.getElementById("negative").value = 0;
+}
+
+function exportToCSV() {
+    var csv = [];
+    var rows = document.querySelectorAll("#reportTable tr");
+
+    for (var i = 0; i < rows.length; i++) {
+        var row = [], cols = rows[i].querySelectorAll("td, th");
+
+        for (var j = 0; j < cols.length; j++) {
+            row.push(cols[j].innerText);
+        }
+        csv.push(row.join(","));
+    }
+
+    // Download CSV
+    var csvFile = new Blob([csv.join("\n")], {type: "text/csv"});
+    var downloadLink = document.createElement("a");
+    downloadLink.download = "hiv_report.csv";
+    downloadLink.href = URL.createObjectURL(csvFile);
+    downloadLink.style.display = "none";
+    document.body.appendChild(downloadLink);
+    downloadLink.click();
+    document.body.removeChild(downloadLink);
+}
+
+function generateCustomReport() {
+    var reportPeriod = document.getElementById("reportPeriod").value;
+    var startDate = document.getElementById("startDate").value;
+    var endDate = document.getElementById("endDate").value;
+    let reportData = [];
+
+    // Basic date validation
+    if ((reportPeriod === "custom") && (!startDate || !endDate)) {
+        alert("Please select both start and end dates for the custom report.");
+        return;
+    }
+
+    const reportTable = document.getElementById("reportTable");
+    if (!reportTable || !reportTable.rows || reportTable.rows.length <= 1) {
+        alert("No data available for the selected report period.");
+        return;
+    }
+    // 1. Filter data based on report period and date range
+    let filteredData = [];
+    for (let i = 1; i < reportTable.rows.length; i++) {
+      const row = reportTable.rows[i];
+      const ward = row.cells[0].textContent;
+      const dateCell = row.cells[1];
+      if (!dateCell) continue;
+
+      const reportDate = dateCell.textContent;
+      if (!reportDate) continue;
+      const reportDateObj = new Date(reportDate);
+
+      let include = false;
+        if (reportPeriod === "all") {
+            include = true;
+        } else if (reportPeriod === "1m") {
+            const oneMonthAgo = new Date();
+            oneMonthAgo.setMonth(oneMonthAgo.getMonth() - 1);
+            include = reportDateObj >= oneMonthAgo;
+        } else if (reportPeriod === "3m") {
+            const threeMonthsAgo = new Date();
+            threeMonthsAgo.setMonth(threeMonthsAgo.getMonth() - 3);
+            include = reportDateObj >= threeMonthsAgo;
+        } else if (reportPeriod === "6m") {
+            const sixMonthsAgo = new Date();
+            sixMonthsAgo.setMonth(sixMonthsAgo.getMonth() - 6);
+            include = reportDateObj >= sixMonthsAgo;
+        } else if (reportPeriod === "1y") {
+            const oneYearAgo = new Date();
+            oneYearAgo.setFullYear(oneYearAgo.getFullYear() - 1);
+            include = reportDateObj >= oneYearAgo;
+        } else if (reportPeriod === "custom") {
+            const startDateObj = new Date(startDate);
+            const endDateObj = new Date(endDate);
+            include = reportDateObj >= startDateObj && reportDateObj <= endDateObj;
+        }
+      if (include) {
+        filteredData.push({
+            ward: ward,
+            date: reportDate,
+            ageRange: row.cells[2].textContent,
+            sex: row.cells[3].textContent,
+            positive: parseInt(row.cells[4].textContent),
+            negative: parseInt(row.cells[5].textContent),
+            total: parseInt(row.cells[6].textContent)
+        });
+      }
+    }
+
+    if (filteredData.length === 0) {
+        alert("No data found for the selected period.");
+        return;
+    }
+
+    // 2. Group by Ward and Age Range
+    const groupedData = {};
+    filteredData.forEach(item => {
+      const key = `${item.ward}-${item.ageRange}`;  // Create a key for each group
+      if (!groupedData[key]) {
+        groupedData[key] = {
+          ward: item.ward,
+          ageRange: item.ageRange,
+          malePositive: 0,
+          maleNegative: 0,
+          femalePositive: 0,
+          femaleNegative: 0,
+          totalPositive: 0,
+          totalNegative: 0,
+          total: 0
+        };
+      }
+      //Update the group data by sex
+        if(item.sex === 'male'){
+            groupedData[key].malePositive += item.positive;
+            groupedData[key].maleNegative += item.negative;
+        } else if(item.sex === 'female'){
+            groupedData[key].femalePositive += item.positive;
+            groupedData[key].femaleNegative += item.negative;
+        }
+
+        groupedData[key].totalPositive += item.positive;
+        groupedData[key].totalNegative += item.negative;
+        groupedData[key].total = groupedData[key].totalPositive + groupedData[key].totalNegative;
+    });
+    // 3.  Convert the grouped data to an array for table display.
+    reportData = Object.values(groupedData).map(group => [
+        group.ward,
+        group.ageRange,
+        group.malePositive + ' (M+)',
+        group.maleNegative + ' (M-)',
+        group.femalePositive + ' (F+)',
+        group.femaleNegative + ' (F-)',
+        group.totalPositive + group.totalNegative
+    ]);
+    // 4. Generate the custom report table (basic)
+    generateReportTable(reportData);
+
+}
+
+
+function generateReportTable(reportData) {
+    // Create the custom report table
+    let customReportTable = document.getElementById('customReportTable');
+    if(customReportTable) {
+        customReportTable.remove(); // remove if exist
+    }
+    customReportTable = document.createElement('table');
+    customReportTable.id = 'customReportTable';
+    customReportTable.style.width = '100%';
+    customReportTable.style.borderCollapse = 'collapse';
+    customReportTable.style.marginTop = '20px';
+
+    // Create header row
+    let headerRow = customReportTable.createTHead().insertRow(0);
+    const headers = ["Ward", "Age Range", "Male(+)", "Male(-)", "Female(+)", "Female(-)", "Total"];
+    for (let i = 0; i < headers.length; i++) {
+        let th = document.createElement('th');
+        th.textContent = headers[i];
+        th.style.border = '1px solid #ddd';
+        th.style.padding = '8px';
+        th.style.textAlign = 'left';
+        headerRow.appendChild(th);
+    }
+
+    // Populate the table with the report data
+    const tbody = customReportTable.createTBody(); // Create the table body
+    for (let i = 0; i < reportData.length; i++) {
+        let row = tbody.insertRow();
+        for (let j = 0; j < reportData[i].length; j++) {
+            let cell = row.insertCell();
+            cell.textContent = reportData[i][j];
+            cell.style.border = '1px solid #ddd';
+            cell.style.padding = '8px';
+        }
+    }
+    // Append the custom report table to the container
+    const container = document.querySelector('.container');
+    container.appendChild(customReportTable);
+}
+
+// Load reports when the page loads
+window.onload = function() {
+    loadReports();
+};
+
+document.getElementById('reportPeriod').addEventListener('change', function() {
+    var customDateRangeDiv = document.getElementById('customDateRange');
+    if (this.value === 'custom') {
+        customDateRangeDiv.style.display = 'block';
+    } else {
+        customDateRangeDiv.style.display = 'none';
+    }
+});
+</script>
+
+</body>
+</html>
+<!-- partial -->
+  
+</body>
+</html>
